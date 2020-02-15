@@ -5,7 +5,7 @@ var objects;
         //PUBLIC PROPERTIES
         //CONSTRUCTOR
         constructor() {
-            super("/Assets/images/ocean.gif");
+            super("./Assets/images/ocean.gif");
             this.Start();
         }
         //PRIVATE METHODS

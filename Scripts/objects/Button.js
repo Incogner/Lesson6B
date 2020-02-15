@@ -3,7 +3,7 @@ var objects;
 (function (objects) {
     class Button extends objects.GameObject {
         //constructor
-        constructor(imagePath = "/Assets/images/placeholder.png", x = 0, y = 0, isCentered = true) {
+        constructor(imagePath = "./Assets/images/placeholder.png", x = 0, y = 0, isCentered = true) {
             super(imagePath, x, y, isCentered);
             this.on("mouseover", this.HoverOver);
             this.on("mouseout", this.HoverOut);

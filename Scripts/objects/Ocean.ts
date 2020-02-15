@@ -8,7 +8,7 @@ module objects{
 
         //CONSTRUCTOR
         constructor(){
-            super("/Assets/images/ocean.gif");
+            super("./Assets/images/ocean.gif");
 
             this.Start();
         }
