@@ -12,7 +12,8 @@ let game = (function(){
         {id: "backButton", src:"./Assets/images/backButton.png"},
         {id: "nextButton", src:"./Assets/images/nextButton.png"},
         {id: "ocean", src:"./Assets/images/ocean.gif"},
-        {id: "placeholder", src:"./Assets/images/placeholder.png"}
+        {id: "placeholder", src:"./Assets/images/placeholder.png"},
+        {id: "plane", src:"./Assets/images/plane.png"}
     ];
 
     function Preload():void{
