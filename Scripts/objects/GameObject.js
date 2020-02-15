@@ -5,13 +5,13 @@ var objects;
         // CONSTRUCTOR
         /**
          * Creates an instance of GameObject.
-         * @param {string} [imagePath="./Assets/images/placeholder.png"]
+         * @param {string} [imagePath="/Assets/images/placeholder.png"]
          * @param {number} [x=0]
          * @param {number} [y=0]
          * @param {boolean} [centered=false]
          * @memberof GameObject
          */
-        constructor(imagePath = "./Assets/images/placeholder.png", x = 0, y = 0, centered = false) {
+        constructor(imagePath = "/Assets/images/placeholder.png", x = 0, y = 0, centered = false) {
             super(imagePath);
             // MEMBER VARIABLES
             this._width = 0;

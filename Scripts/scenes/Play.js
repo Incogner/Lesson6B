@@ -14,7 +14,7 @@ var scenes;
         // PUBLIC METHODS
         Start() {
             this.playLabel = new objects.Label("Play Game", "80px", "Consolas", "#000000", 320, 200, true);
-            this.nextButton = new objects.Button("./Assets/images/nextButton.png", 320, 400, true);
+            this.nextButton = new objects.Button("/Assets/images/nextButton.png", 320, 400, true);
             this.Main();
         }
         Update() {
