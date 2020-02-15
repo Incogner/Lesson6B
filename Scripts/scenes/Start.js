@@ -15,7 +15,7 @@ var scenes;
         // PUBLIC METHODS
         Start() {
             this._startLabel = new objects.Label("The Game", "80px", "Consolas", "#FFF000", 320, 200, true);
-            this._startButton = new objects.Button("./Assets/images/startButton.png", 320, 400, true);
+            this._startButton = new objects.Button(config.Game.ASSETS.getResult("startButton"), 320, 400, true);
             this._ocean = new objects.Ocean();
             this.Main();
         }

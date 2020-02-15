@@ -6,6 +6,22 @@ let game = (function(){
 
     let currentSceneState:scenes.State;
     let currentScene:objects.Scene;
+    let assets:createjs.LoadQueue;
+    let assetsManifest = [
+        {id: "startButton", src:"./Assets/images/startButton.png"},
+        {id: "backButton", src:"./Assets/images/backButton.png"},
+        {id: "nextButton", src:"./Assets/images/nextButton.png"},
+        {id: "ocean", src:"./Assets/images/ocean.gif"},
+        {id: "placeholder", src:"./Assets/images/placeholder.png"}
+    ];
+
+    function Preload():void{
+        assets = new createjs.LoadQueue();
+        config.Game.ASSETS = assets;
+        assets.installPlugin(createjs.Sound);
+        assets.loadManifest(assetsManifest);
+        assets.on("complete", Start);
+    }
    
 
     /**
@@ -75,5 +91,5 @@ let game = (function(){
 
     }
 
-    window.addEventListener("load", Start);
+    window.addEventListener("load", Preload);
 })();

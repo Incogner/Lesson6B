@@ -5,7 +5,7 @@ var objects;
         //PUBLIC PROPERTIES
         //CONSTRUCTOR
         constructor() {
-            super("./Assets/images/ocean.gif");
+            super(config.Game.ASSETS.getResult("ocean"));
             this.Start();
         }
         //PRIVATE METHODS

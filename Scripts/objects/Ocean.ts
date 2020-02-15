@@ -8,7 +8,7 @@ module objects{
 
         //CONSTRUCTOR
         constructor(){
-            super("./Assets/images/ocean.gif");
+            super(config.Game.ASSETS.getResult("ocean"));
 
             this.Start();
         }

@@ -6,7 +6,7 @@ var objects;
         // PUBLIC PROPERTIES
         // CONSTRUCTOR
         constructor() {
-            super("./Assets/images/placeholder.png", 0, 0, true);
+            super(config.Game.ASSETS.getResult("placeholder"), 0, 0, true);
             this.Start();
         }
         // PRIVATE METHODS

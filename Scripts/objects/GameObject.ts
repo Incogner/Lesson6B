@@ -109,13 +109,13 @@ module objects
         // CONSTRUCTOR
         /**
          * Creates an instance of GameObject.
-         * @param {string} [imagePath="./Assets/images/placeholder.png"]
+         * @param {object} [imagePath="./Assets/images/placeholder.png"]
          * @param {number} [x=0]
          * @param {number} [y=0]
          * @param {boolean} [centered=false]
          * @memberof GameObject
          */
-        constructor(imagePath:string = "./Assets/images/placeholder.png",
+        constructor(imagePath:object = config.Game.ASSETS.getResult("placeholder"),
                     x:number = 0, y:number = 0, centered:boolean = false)
         {
             super(imagePath);

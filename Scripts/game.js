@@ -6,6 +6,21 @@ let game = (function () {
     let stage;
     let currentSceneState;
     let currentScene;
+    let assets;
+    let assetsManifest = [
+        { id: "startButton", src: "./Assets/images/startButton.png" },
+        { id: "backButton", src: "./Assets/images/backButton.png" },
+        { id: "nextButton", src: "./Assets/images/nextButton.png" },
+        { id: "ocean", src: "./Assets/images/ocean.gif" },
+        { id: "placeholder", src: "./Assets/images/placeholder.png" }
+    ];
+    function Preload() {
+        assets = new createjs.LoadQueue();
+        config.Game.ASSETS = assets;
+        assets.installPlugin(createjs.Sound);
+        assets.loadManifest(assetsManifest);
+        assets.on("complete", Start);
+    }
     /**
      * Perform Initialization in the Start function
      *
@@ -59,6 +74,6 @@ let game = (function () {
         stage.addChild(currentScene);
         currentSceneState = config.Game.SCENE_STATE;
     }
-    window.addEventListener("load", Start);
+    window.addEventListener("load", Preload);
 })();
 //# sourceMappingURL=game.js.map
